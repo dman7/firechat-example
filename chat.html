@@ -31,18 +31,13 @@
           console.log("Authenticated successfully with payload:", authData);
 
 
-          chat   = new FirechatUI(chatRef, document.getElementById("firechat-container"));
+          chatUI   = new FirechatUI(chatRef, document.getElementById("firechat-container"));
 
           // var input = document.getElementById('userInput').value;
           var username = window.prompt("Enter a username");
-          console.log(username);
-          chat.setUser(authData.uid, username);
-
-
+          chatUI.setUser(authData.uid, username);
         }
       }, { remember: "sessionOnly" });
-
-
     </script>
 
     <div id='firechat-container'></div>
